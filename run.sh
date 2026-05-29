@@ -1,0 +1,14 @@
+python es.py \
+    --model_name Qwen/Qwen2.5-3B-Instruct \
+    --task countdown \
+    --num_engines 8 \
+    --cuda_devices 0,1,2,3,4,5,6,7 \
+    --population_size 30 \
+    --precision float16 \
+    --global_seed 0 \
+    --num_iterations 500 \
+    --experiment_dir experiments/forgetting \
+    --caching \
+    --wandb_project es-forgetting \
+    --weight_decay_type l2 \
+    --weight_decay_lambda 10.0
